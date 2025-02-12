@@ -35,6 +35,7 @@ const Pagination = ({ currentPage, itemsPerPage, totalItems, onPageChange, onIte
   };
 
   const handlePageChange = (page) => {
+    console.log("handlePageChange called with page:", page);
     setLocalCurrentPage(page);
     onPageChange(page);
   };

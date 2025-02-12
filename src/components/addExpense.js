@@ -133,10 +133,13 @@ const AddExpense = ({ open, onClose }) => {
     open && (
       <div className="modal" >
         <div className="modal-content">
+          <div className='flex justify-between'>
           <span className="close" onClick={onClose}>
             ×
           </span>
-          <h3>Add Expense</h3>
+          <h2 className="modal-title">Add Expense</h2>
+          </div>
+
           <form onSubmit={handleSubmit}>
           <div>
               <label>Employee Slug:</label>
@@ -205,9 +208,9 @@ const AddExpense = ({ open, onClose }) => {
            
 
             
-            <div>
-              <button type="submit">Submit</button>
-              <button type="button" onClick={onClose}>
+            <div className="button-group">
+              <button type="submit" className="btn-success">Submit</button>
+              <button type="button" className="btn-danger" onClick={onClose}>
                 Cancel
               </button>
             </div>
